@@ -1,6 +1,6 @@
 #include <iostream>
 
-class DynamicArray {
+class DynamicArray { // dynamic array class
     void DynamicArray::resize(int newcapacity);
 public:
     int _size;

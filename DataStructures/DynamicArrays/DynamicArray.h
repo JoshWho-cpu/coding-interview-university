@@ -1,3 +1,6 @@
+#ifndef DYNAMICARRAY_H
+#define DYNAMICARRAY_H
+
 class DynamicArray { // dynamic array class
     void resize(int newcapacity);
 public:
@@ -101,3 +104,4 @@ void DynamicArray::resize(int newcapacity) {
     ptr = resized; // updates
 }
 
+#endif

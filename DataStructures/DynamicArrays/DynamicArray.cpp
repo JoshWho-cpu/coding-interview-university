@@ -1,5 +1,3 @@
-#include <iostream>
-
 class DynamicArray { // dynamic array class
     void DynamicArray::resize(int newcapacity);
 public:
@@ -33,7 +31,7 @@ bool DynamicArray::is_empty() {
 }
 
 int DynamicArray::at(int index) {
-    if (index < 0 || index >= _size) {exit(1);}  // check out of bounds
+    if (index < 0 || index >= _size) {return -1;}  // check out of bounds
     return ptr[index];
 }
 
@@ -103,8 +101,3 @@ void DynamicArray::resize(int newcapacity) {
     ptr = resized; // updates
 }
 
-int main() {
-    DynamicArray arr; // initial array
-
-    return 0;
-}

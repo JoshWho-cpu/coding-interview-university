@@ -12,7 +12,7 @@ public:
     Queue &operator=(const Queue &source) = delete;
 
     void enqueue(const T &value);
-    const T& dequeue();
+    const T dequeue();
     bool empty();
 private:
     Node<T>* head;  // where items will be dequeued

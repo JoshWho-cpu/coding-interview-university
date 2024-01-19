@@ -15,7 +15,7 @@ Queue<T>::~Queue() {
 
 template <class T>
 void Queue<T>::enqueue(const T &value) {
-    Node<T> node = new Node(value);
+    Node<T>* node = new Node(value);
     node->SetNext(nullptr);
 
     if (empty()) {
@@ -29,7 +29,7 @@ void Queue<T>::enqueue(const T &value) {
 }
 
 template <class T>
-const T& Queue<T>::dequeue() {
+const T Queue<T>::dequeue() {
     if (empty()) {
         std::cerr << "Cannot dequeue from empty queue" << std::endl;
         exit(EXIT_FAILURE);
